@@ -36,7 +36,7 @@ func (o *OrderRequest) Process() (*OrderResponse, error) {
 
 	orderResponse := NewOrderResponse(o.OrderID, "failed")
 
-	if o.Total < 100.00 {
+	if o.Total < 1000.00 {
 		orderResponse.Status = "paid"
 	}
 
